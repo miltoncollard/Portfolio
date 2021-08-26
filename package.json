@@ -1,0 +1,16 @@
+{
+  "name": "porfolio-web-site",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website Using Html, Css and JavaScript, With a beautiful user interface. It contains a Header, Home, About, Skills, Qualification, Services, Portfolio, Project in mind, Testimonial, Contact and Footer. Don't forget to join the channel for more videos like this. [Bedimcode](https://www.youtube.com/c/Bedimcode)",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss assets/sass/styles.scss assets/css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--==================== ICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <script src="https://kit.fontawesome.com/38e612e0ec.js" crossorigin="anonymous"></script>
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Milton Collard - Porfolio WebSite</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <!--==================== VIDEO ====================-->
+            <video autoplay loop class="header__backvideo" muted plays-inline>
+                <source src="assets/mp4/header_background.mp4" type="video/mp4">
+            </video>
+            <!--==================== NAV ====================-->
+            <nav class="nav container">
+                <a href="" class="nav__logo">MC</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="fas fa-h-square nav__icon"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="far fa-user nav__icon"></i> About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="fas fa-keyboard nav__icon"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="fas fa-briefcase nav__icon"></i> Services
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="far fa-image nav__icon"></i> Portfolio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="far fa-paper-plane nav__icon"></i> Contactme
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="fas fa-times nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="far fa-moon change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="fas fa-border-all"></i>
+                    </div>
+                </div>
+            </nav>
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/" target="_blank" class="home__social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/?hl=es" target="_blank" class="home__social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://github.com/" target="_blank" class="home__social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__data">
+                            <svg 
+                                id="home-title"
+                                width="1000" 
+                                height="117" 
+                                viewBox="0 0 1393 117" 
+                                fill="none" 
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0" y="0" width="1393" height="117" fill="black">
+                                <rect fill="white" width="1393" height="117"/>
+                                <path d="M125.312 7.10098V110.95H109.826V33.5133L70.6867 110.95H59.7956L20.4857 33.3633V110.95H5V7.10098H21.6769L65.2411 92.9411L108.805 7.10098H125.312Z"/>
+                                <path d="M167.06 6.35063V110.95H151.575V6.35063H167.06Z"/>
+                                <path d="M208.939 99.8443H250.461V110.95H193.453V6.35063H208.939V99.8443Z"/>
+                                <path d="M339.91 6.35063V17.4558H307.578V110.95H292.092V17.4558H259.589V6.35063H339.91Z"/>
+                                <path d="M412.747 112C401.743 112 391.702 109.749 382.626 105.247C373.551 100.645 366.347 94.2917 361.015 86.188C355.796 77.9841 353.187 68.7798 353.187 58.575C353.187 48.3703 355.796 39.216 361.015 31.1122C366.347 22.9084 373.551 16.5554 382.626 12.0533C391.702 7.45115 401.743 5.15007 412.747 5.15007C423.865 5.15007 433.962 7.45115 443.038 12.0533C452.114 16.5554 459.261 22.8583 464.48 30.9621C469.698 39.0659 472.307 48.2702 472.307 58.575C472.307 68.8799 469.698 78.0842 464.48 86.188C459.261 94.2917 452.114 100.645 443.038 105.247C433.962 109.749 423.865 112 412.747 112ZM412.747 100.144C421.029 100.144 428.46 98.4437 435.04 95.0421C441.733 91.6405 446.952 86.7882 450.696 80.4853C454.553 74.1823 456.481 66.8789 456.481 58.575C456.481 50.1711 454.553 42.8677 450.696 36.6648C446.952 30.3619 441.79 25.5096 435.21 22.108C428.63 18.7064 421.142 17.0056 412.747 17.0056C404.352 17.0056 396.864 18.7064 390.284 22.108C383.704 25.5096 378.486 30.3619 374.628 36.6648C370.885 42.8677 369.013 50.1711 369.013 58.575C369.013 66.8789 370.885 74.1823 374.628 80.4853C378.486 86.7882 383.704 91.6405 390.284 95.0421C396.978 98.4437 404.465 100.144 412.747 100.144Z"/>
+                                <path d="M586.005 110.95H570.52L508.237 27.6606V110.95H492.751V6.20057H508.237L570.52 89.3394V6.20057H586.005V110.95Z"/>
+                                <path d="M651.986 58.575C651.986 48.3703 654.595 39.216 659.814 31.1122C665.032 22.9084 672.123 16.5054 681.085 11.9032C690.161 7.30108 700.201 5 711.206 5C724.139 5 735.427 7.75129 745.07 13.2539C754.713 18.7564 761.747 26.5601 766.172 36.6648H747.623C744.333 30.3619 739.568 25.5096 733.328 22.108C727.202 18.7064 719.828 17.0056 711.206 17.0056C702.924 17.0056 695.493 18.7064 688.913 22.108C682.333 25.5096 677.171 30.3619 673.428 36.6648C669.684 42.8677 667.812 50.1711 667.812 58.575C667.812 66.8789 669.684 74.1823 673.428 80.4853C677.171 86.6882 682.333 91.4904 688.913 94.892C695.493 98.2936 702.924 99.9944 711.206 99.9944C719.828 99.9944 727.202 98.3436 733.328 95.0421C739.568 91.6405 744.333 86.7882 747.623 80.4853H766.172C761.747 90.49 754.713 98.2436 745.07 103.746C735.427 109.149 724.139 111.85 711.206 111.85C700.201 111.85 690.161 109.599 681.085 105.097C672.123 100.495 665.032 94.1417 659.814 86.0379C654.595 77.9341 651.986 68.7798 651.986 58.575Z"/>
+                                <path d="M842.998 112C831.994 112 821.953 109.749 812.877 105.247C803.802 100.645 796.598 94.2917 791.266 86.188C786.047 77.9841 783.438 68.7798 783.438 58.575C783.438 48.3703 786.047 39.216 791.266 31.1122C796.598 22.9084 803.802 16.5554 812.877 12.0533C821.953 7.45115 831.994 5.15007 842.998 5.15007C854.116 5.15007 864.213 7.45115 873.289 12.0533C882.365 16.5554 889.512 22.8583 894.731 30.9621C899.949 39.0659 902.558 48.2702 902.558 58.575C902.558 68.8799 899.949 78.0842 894.731 86.188C889.512 94.2917 882.365 100.645 873.289 105.247C864.213 109.749 854.116 112 842.998 112ZM842.998 100.144C851.28 100.144 858.711 98.4437 865.291 95.0421C871.984 91.6405 877.203 86.7882 880.947 80.4853C884.804 74.1823 886.732 66.8789 886.732 58.575C886.732 50.1711 884.804 42.8677 880.947 36.6648C877.203 30.3619 872.041 25.5096 865.461 22.108C858.881 18.7064 851.393 17.0056 842.998 17.0056C834.603 17.0056 827.115 18.7064 820.535 22.108C813.955 25.5096 808.737 30.3619 804.879 36.6648C801.136 42.8677 799.264 50.1711 799.264 58.575C799.264 66.8789 801.136 74.1823 804.879 80.4853C808.737 86.7882 813.955 91.6405 820.535 95.0421C827.229 98.4437 834.716 100.144 842.998 100.144Z"/>
+                                <path d="M938.488 99.8443H980.01V110.95H923.002V6.35063H938.488V99.8443Z"/>
+                                <path d="M1011.94 99.8443H1053.46V110.95H996.455V6.35063H1011.94V99.8443Z"/>
+                                <path d="M1140.02 87.6886H1088.29L1078.76 110.95H1062.42L1105.3 6.95091H1123.17L1165.89 110.95H1149.55L1140.02 87.6886ZM1135.6 76.5835L1114.15 23.7588L1092.71 76.5835H1135.6Z"/>
+                                <path d="M1247.03 110.95L1218.78 68.1795H1200.06V110.95H1184.58V6.35063H1222.86C1231.83 6.35063 1239.37 7.70126 1245.5 10.4025C1251.74 13.1038 1256.39 16.7555 1259.45 21.3576C1262.51 25.9598 1264.05 31.2123 1264.05 37.115C1264.05 44.3184 1261.66 50.6714 1256.9 56.1739C1252.25 61.6765 1245.21 65.3282 1235.8 67.129L1265.58 110.95H1247.03ZM1200.06 57.2244H1222.86C1231.26 57.2244 1237.56 55.4236 1241.75 51.8219C1245.95 48.1202 1248.05 43.2179 1248.05 37.115C1248.05 30.9121 1245.95 26.1099 1241.75 22.7083C1237.67 19.3067 1231.37 17.6059 1222.86 17.6059H1200.06V57.2244Z"/>
+                                <path d="M1325.04 6.35063C1337.97 6.35063 1349.14 8.50164 1358.56 12.8036C1368.09 17.0056 1375.35 23.0584 1380.34 30.9621C1385.45 38.8658 1388 48.1702 1388 58.8752C1388 69.5802 1385.45 78.8845 1380.34 86.7882C1375.35 94.5919 1368.09 100.595 1358.56 104.797C1349.14 108.899 1337.97 110.95 1325.04 110.95H1288.11V6.35063H1325.04ZM1325.04 99.6943C1340.35 99.6943 1352.04 96.1426 1360.09 89.0393C1368.15 81.8359 1372.17 71.7812 1372.17 58.8752C1372.17 45.8691 1368.09 35.7144 1359.92 28.4109C1351.87 21.1075 1340.24 17.4558 1325.04 17.4558H1303.59V99.6943H1325.04Z"/>
+                                </mask>
+                                <path d="M125.312 7.10098V110.95H109.826V33.5133L70.6867 110.95H59.7956L20.4857 33.3633V110.95H5V7.10098H21.6769L65.2411 92.9411L108.805 7.10098H125.312Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M167.06 6.35063V110.95H151.575V6.35063H167.06Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M208.939 99.8443H250.461V110.95H193.453V6.35063H208.939V99.8443Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M339.91 6.35063V17.4558H307.578V110.95H292.092V17.4558H259.589V6.35063H339.91Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M412.747 112C401.743 112 391.702 109.749 382.626 105.247C373.551 100.645 366.347 94.2917 361.015 86.188C355.796 77.9841 353.187 68.7798 353.187 58.575C353.187 48.3703 355.796 39.216 361.015 31.1122C366.347 22.9084 373.551 16.5554 382.626 12.0533C391.702 7.45115 401.743 5.15007 412.747 5.15007C423.865 5.15007 433.962 7.45115 443.038 12.0533C452.114 16.5554 459.261 22.8583 464.48 30.9621C469.698 39.0659 472.307 48.2702 472.307 58.575C472.307 68.8799 469.698 78.0842 464.48 86.188C459.261 94.2917 452.114 100.645 443.038 105.247C433.962 109.749 423.865 112 412.747 112ZM412.747 100.144C421.029 100.144 428.46 98.4437 435.04 95.0421C441.733 91.6405 446.952 86.7882 450.696 80.4853C454.553 74.1823 456.481 66.8789 456.481 58.575C456.481 50.1711 454.553 42.8677 450.696 36.6648C446.952 30.3619 441.79 25.5096 435.21 22.108C428.63 18.7064 421.142 17.0056 412.747 17.0056C404.352 17.0056 396.864 18.7064 390.284 22.108C383.704 25.5096 378.486 30.3619 374.628 36.6648C370.885 42.8677 369.013 50.1711 369.013 58.575C369.013 66.8789 370.885 74.1823 374.628 80.4853C378.486 86.7882 383.704 91.6405 390.284 95.0421C396.978 98.4437 404.465 100.144 412.747 100.144Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M586.005 110.95H570.52L508.237 27.6606V110.95H492.751V6.20057H508.237L570.52 89.3394V6.20057H586.005V110.95Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M651.986 58.575C651.986 48.3703 654.595 39.216 659.814 31.1122C665.032 22.9084 672.123 16.5054 681.085 11.9032C690.161 7.30108 700.201 5 711.206 5C724.139 5 735.427 7.75129 745.07 13.2539C754.713 18.7564 761.747 26.5601 766.172 36.6648H747.623C744.333 30.3619 739.568 25.5096 733.328 22.108C727.202 18.7064 719.828 17.0056 711.206 17.0056C702.924 17.0056 695.493 18.7064 688.913 22.108C682.333 25.5096 677.171 30.3619 673.428 36.6648C669.684 42.8677 667.812 50.1711 667.812 58.575C667.812 66.8789 669.684 74.1823 673.428 80.4853C677.171 86.6882 682.333 91.4904 688.913 94.892C695.493 98.2936 702.924 99.9944 711.206 99.9944C719.828 99.9944 727.202 98.3436 733.328 95.0421C739.568 91.6405 744.333 86.7882 747.623 80.4853H766.172C761.747 90.49 754.713 98.2436 745.07 103.746C735.427 109.149 724.139 111.85 711.206 111.85C700.201 111.85 690.161 109.599 681.085 105.097C672.123 100.495 665.032 94.1417 659.814 86.0379C654.595 77.9341 651.986 68.7798 651.986 58.575Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M842.998 112C831.994 112 821.953 109.749 812.877 105.247C803.802 100.645 796.598 94.2917 791.266 86.188C786.047 77.9841 783.438 68.7798 783.438 58.575C783.438 48.3703 786.047 39.216 791.266 31.1122C796.598 22.9084 803.802 16.5554 812.877 12.0533C821.953 7.45115 831.994 5.15007 842.998 5.15007C854.116 5.15007 864.213 7.45115 873.289 12.0533C882.365 16.5554 889.512 22.8583 894.731 30.9621C899.949 39.0659 902.558 48.2702 902.558 58.575C902.558 68.8799 899.949 78.0842 894.731 86.188C889.512 94.2917 882.365 100.645 873.289 105.247C864.213 109.749 854.116 112 842.998 112ZM842.998 100.144C851.28 100.144 858.711 98.4437 865.291 95.0421C871.984 91.6405 877.203 86.7882 880.947 80.4853C884.804 74.1823 886.732 66.8789 886.732 58.575C886.732 50.1711 884.804 42.8677 880.947 36.6648C877.203 30.3619 872.041 25.5096 865.461 22.108C858.881 18.7064 851.393 17.0056 842.998 17.0056C834.603 17.0056 827.115 18.7064 820.535 22.108C813.955 25.5096 808.737 30.3619 804.879 36.6648C801.136 42.8677 799.264 50.1711 799.264 58.575C799.264 66.8789 801.136 74.1823 804.879 80.4853C808.737 86.7882 813.955 91.6405 820.535 95.0421C827.229 98.4437 834.716 100.144 842.998 100.144Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M938.488 99.8443H980.01V110.95H923.002V6.35063H938.488V99.8443Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M1011.94 99.8443H1053.46V110.95H996.455V6.35063H1011.94V99.8443Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M1140.02 87.6886H1088.29L1078.76 110.95H1062.42L1105.3 6.95091H1123.17L1165.89 110.95H1149.55L1140.02 87.6886ZM1135.6 76.5835L1114.15 23.7588L1092.71 76.5835H1135.6Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M1247.03 110.95L1218.78 68.1795H1200.06V110.95H1184.58V6.35063H1222.86C1231.83 6.35063 1239.37 7.70126 1245.5 10.4025C1251.74 13.1038 1256.39 16.7555 1259.45 21.3576C1262.51 25.9598 1264.05 31.2123 1264.05 37.115C1264.05 44.3184 1261.66 50.6714 1256.9 56.1739C1252.25 61.6765 1245.21 65.3282 1235.8 67.129L1265.58 110.95H1247.03ZM1200.06 57.2244H1222.86C1231.26 57.2244 1237.56 55.4236 1241.75 51.8219C1245.95 48.1202 1248.05 43.2179 1248.05 37.115C1248.05 30.9121 1245.95 26.1099 1241.75 22.7083C1237.67 19.3067 1231.37 17.6059 1222.86 17.6059H1200.06V57.2244Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                <path d="M1325.04 6.35063C1337.97 6.35063 1349.14 8.50164 1358.56 12.8036C1368.09 17.0056 1375.35 23.0584 1380.34 30.9621C1385.45 38.8658 1388 48.1702 1388 58.8752C1388 69.5802 1385.45 78.8845 1380.34 86.7882C1375.35 94.5919 1368.09 100.595 1358.56 104.797C1349.14 108.899 1337.97 110.95 1325.04 110.95H1288.11V6.35063H1325.04ZM1325.04 99.6943C1340.35 99.6943 1352.04 96.1426 1360.09 89.0393C1368.15 81.8359 1372.17 71.7812 1372.17 58.8752C1372.17 45.8691 1368.09 35.7144 1359.92 28.4109C1351.87 21.1075 1340.24 17.4558 1325.04 17.4558H1303.59V99.6943H1325.04Z" stroke="white" stroke-width="10" mask="url(#path-1-outside-1)"/>
+                                </svg>
+                            <h3 class="home__subtitle">Frontend developer</h3>
+
+                            <div class="home__scroll">
+                                <a href="#about" class="home__scroll-button button--flex">
+                                    <span class="home__scroll-name">Scroll down</span>
+                                    <i class="fas fa-chevron-down home__scroll-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">My introduction</span>
+        
+                <div class="about__container container grid">
+                    <img src="assets/img/about.jpg" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aliquam totam amet minima iste voluptates non reiciendis magni nam, deserunt in officia dolores possimus explicabo dicta fugiat nulla. Beatae, repellendus?</p>
+                        
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">06+</span>
+                                <span class="about__info-name">Years <br> experience</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">5+</span>
+                                <span class="about__info-name">Complete <br> project</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">03+</span>
+                                <span class="about__info-name">Companies <br> worked</span>
+                            </div>
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/MiltonCV.pdf" class="button button--flex">
+                                Download CV<i class="fas fa-cloud-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">My technical level</span>
+
+                <div class="skills__container container grid">
+                    <div>
+
+                        <!--================= SKILLS 1=================-->
+                        <div class="skills__content skills__open">
+                            <div class="skills__header">
+                                <i class="fas fa-code skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Frontend developer</h1>
+                                    <span class="skill__subtitle">More than 1 years</span>
+                                </div>
+                                
+                                <i class="fas fa-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML</h3>
+                                        <span class="skills__number">90%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__html"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CSS</h3>
+                                        <span class="skills__number">60%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__css"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">JavaScript</h3>
+                                        <span class="skills__number">40%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__js"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">React</h3>
+                                        <span class="skills__number">10%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__react"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--================= SKILLS 2=================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="fas fa-server skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Backend developer</h1>
+                                    <span class="skill__subtitle">More than 4 years</span>
+                                </div>
+                                
+                                <i class="fas fa-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">COBOL</h3>
+                                        <span class="skills__number">80%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__cobol"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Python</h3>
+                                        <span class="skills__number">45%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__python"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Java</h3>
+                                        <span class="skills__number">40%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__java"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Node Js</h3>
+                                        <span class="skills__number">10%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__node"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">My personal journey</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target='#education'>
+                            <i class="fas fa-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
+                        <div class="qualification__button button--flex" data-target='#work'>
+                            <i class="fas fa-briefcase qualification__icon"></i>
+                            Work
+                        </div>
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!--==================== QUALIFICATION CONTENT 1 ====================-->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!--==================== QUALIFICATION 1 ====================-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Tecnico en Computacion</h3>
+                                    <span class="qualification__subtitle">ET N°37 - High School</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2006-2011
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!--==================== QUALIFICATION 2 ====================-->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Ingeniria en Sistemas</h3>
+                                    <span class="qualification__subtitle">UADE - University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2019 - Present
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--==================== QUALIFICATION 3 ====================-->
+                            <div class="qualification__data">                                
+
+                                <div>
+                                    <h3 class="qualification__title">Web Developer</h3>
+                                    <span class="qualification__subtitle">Coderhouse - Institute</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2021 - Present
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== QUALIFICATION CONTENT 2 ====================-->
+                        <div class="qualification__content qualification__active" data-content id="work">
+                            <!--==================== QUALIFICATION 1 ====================-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">Analista de Sistemas SSR</h3>
+                                    <span class="qualification__subtitle">Banco BBVA - Argentina</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2016-2017/2018-Present
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+
+                            <!--==================== QUALIFICATION 2 ====================-->
+                            <div class="qualification__data">
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Analista QA</h3>
+                                    <span class="qualification__subtitle">Tsoft - Argentina</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2017-2018
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--==================== QUALIFICATION 3 ====================-->
+                            <div class="qualification__data">
+
+                                <div>
+                                    <h3 class="qualification__title">Atencion al Cliente</h3>
+                                    <span class="qualification__subtitle">ComData - Argentina</span>
+                                    <div class="qualification__calendar">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        2014-2014
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">What i offer</span>
+
+                <div class="services__container container grid">
+                    <!--==================== SERVICES 1 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="fas fa-th services__icon"></i>
+                            <h3 class="services__title">Maquetado <br> y Diseño</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="fas fa-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Maquetado <br> y Diseño</h4>
+                                <i class="fas fa-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SERVICES 2 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="fas fa-terminal services__icon"></i>
+                            <h3 class="services__title">Desarrollo <br> Frontend</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="fas fa-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Desarrollo <br> Frontend</h4>
+                                <i class="fas fa-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SERVICES 3 ====================-->
+                    <div class="services__content">
+                        <div>
+                            <i class="fas fa-chart-line services__icon"></i>
+                            <h3 class="services__title">Posicionamiento <br> SEO</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="fas fa-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Posicionamiento <br> SEO</h4>
+                                <i class="fas fa-times services__modal-close"></i>
+
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="far fa-check-circle services__modal-icon"></i>
+                                        <p>Description text.Description text.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--==================== PORTFOLIO ====================-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">Most recent work</span>
+
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== PORTFOLIO 1 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Modern Website</h3>
+                                <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, ullam! Nulla, voluptatum ipsa? Sequi, aliquam ab aspernatur dolorum maiores ullam pariatur quaerat aliquid odio est deserunt earum rem accusantium iusto!</p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="fas fa-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--==================== PORTFOLIO 2 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Brand Desing</h3>
+                                <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, ullam! Nulla, voluptatum ipsa? Sequi, aliquam ab aspernatur dolorum maiores ullam pariatur quaerat aliquid odio est deserunt earum rem accusantium iusto!</p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="fas fa-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--==================== PORTFOLIO 3 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img">
+
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Online Storage</h3>
+                                <p class="portfolio__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, ullam! Nulla, voluptatum ipsa? Sequi, aliquam ab aspernatur dolorum maiores ullam pariatur quaerat aliquid odio est deserunt earum rem accusantium iusto!</p>
+                                <a href="" class="button button--flex button--small portfolio__button">
+                                    Demo
+                                    <i class="fas fa-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="fas fa-angle-right swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fas fa-angle-left swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </section>
+
+            <!--==================== PROJECT IN MIND ====================-->
+            <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Tenes un nuevo proyecto en mente?</h2>
+                            <p class="project__description">Contactame ahora</p>
+                            <a href="#contact" class="button button--flex button--white">
+                                Contact Me
+                                <i class="far fa-comments project__icon button__icon"></i>
+                            </a>
+                        </div>
+
+                        <img src="assets/img/project.png" alt="" class="project__img">
+                    </div>
+                </div>
+
+            </section>
+
+            <!--==================== TESTIMONIAL ====================-->
+            <section class="testimonial section">
+                
+            </section>
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="fas fa-mobile-alt contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">+54 011-9999-9999</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="far fa-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">mcollard92@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="fas fa-map-marker-alt contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Argentina, Buenos Aires, CABA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Name</label>
+                                <input type="text" class="contact__input">
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" class="contact__input">
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Proyecto</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Mensaje</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+
+                        <div>
+                            <a href="" class="button button--flex">
+                                Enviar Mensaje
+                                <i class="far fa-comments button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Milton Collard</h1>
+                        <span class="footer__subtitle">Frontend developer</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer__link">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="" target="_blank" class="footer__social">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a href="" target="_blank" class="footer__social">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="" target="_blank" class="footer__social">
+                            <i class="fab fa-twitter-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; Milton Collard. Todos los derechos reservados</p>
+            </div>
+            
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="fas fa-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
+
+    
