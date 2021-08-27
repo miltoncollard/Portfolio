@@ -134,13 +134,31 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== EVENTS AFTER HEADER - ANIMATIONS ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+    const mainBlock = document.getElementById('main')
+
+    window.addEventListener("scroll", function(){
+        let elementAboutMe = document.getElementById("about");
+        let socialContent = document.createElement("div");
+        if (window.scrollY > (elementAboutMe.offsetTop)){
+            nav.classList.add('scroll-header') 
+            if(document.getElementsByClassName('social__content').length == 0){
+                mainBlock.appendChild(socialContent).classList.add("social__content")
+            }
+        }else{
+            nav.classList.remove('scroll-header')
+            mainBlock.removeChild( document.querySelector(".social__content"))
+
+        }
+    })
+
+
 }
 window.addEventListener('scroll', scrollHeader)
+const nav = document.getElementById('header')
+console.log("nav: " + nav.getElementsByClassName('scroll-header'))
 
 /*==================== SHOW SCROLL UP ====================*/ 
 function scrollUp(){
