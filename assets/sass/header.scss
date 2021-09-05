@@ -99,7 +99,7 @@
     }
 }
 
-.scroll-header{
+.scroll-headerL{
     
     .nav{
         background-color: rgba(0,0,0,0.15);
@@ -125,6 +125,37 @@
             .nav__toggle{
                 transition: all ease 1.5s;
                 color: black;
+            }
+        }
+    }
+    
+}
+.scroll-headerD{
+    
+    .nav{
+        background-color: rgba(255, 255, 255, 0.15);
+        position: fixed;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0 var(--mb-1-5);
+        animation: nav-scroll 1s;
+
+        .nav__logo{
+            transition: all ease 1.5s;
+            color:white;
+        }
+
+        .nav__btns{
+            
+            .fa-moon{
+                transition: all ease 1.5s;
+                color: white;
+            }
+
+            .nav__toggle{
+                transition: all ease 1.5s;
+                color: white;
             }
         }
     }

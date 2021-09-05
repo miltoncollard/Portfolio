@@ -1,10 +1,11 @@
+let themeVersion = 'light'
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
-/* Validate if constant exists */
+/* Validar si existe constante */
 if(navToggle){
     navToggle.addEventListener('click', () =>{
         document.getElementById('nav-menu').style.bottom = '0'
@@ -12,7 +13,7 @@ if(navToggle){
 }
 
 /*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
+/* Validar si existe constante */
 if(navClose){
     navClose.addEventListener('click', () =>{
         document.getElementById('nav-menu').style.bottom = '-100%'
@@ -75,10 +76,6 @@ const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
 
-      console.log(modalViews)
-      console.log(modalBtns)
-      console.log(modalCloses)
-
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
 }
@@ -138,76 +135,87 @@ window.addEventListener('scroll', scrollActive)
 function scrollHeader(){
     const nav = document.getElementById('header')
     const mainBlock = document.getElementById('main')
+    const scrollUp = document.getElementById('scroll-up');
+    let elementAboutMe = document.getElementById("about");
+    let socialContent = document.createElement("div");
 
-    window.addEventListener("scroll", function(){
-        let elementAboutMe = document.getElementById("about");
-        let socialContent = document.createElement("div");
-        if (window.scrollY > (elementAboutMe.offsetTop)){
-            nav.classList.add('scroll-header') 
-            if(document.getElementsByClassName('social__content').length == 0){
-                mainBlock.appendChild(socialContent).classList.add("social__content")
+    if (this.scrollY >= 600){  
+        console.log(themeVersion)
+        if(themeVersion === 'dark'){
+            nav.classList.add('scroll-headerD');
+            scrollUp.classList.add('show-scrollD');
+            if(document.getElementsByClassName('social__contentD').length == 0){
+                mainBlock.appendChild(socialContent).classList.add("social__contentD")
+                document.getElementsByClassName(".social__contentL").remove;
             }
         }else{
-            nav.classList.remove('scroll-header')
-            mainBlock.removeChild( document.querySelector(".social__content"))
-
+            nav.classList.add('scroll-headerL');
+            scrollUp.classList.add('show-scrollL');
+            if(document.getElementsByClassName('social__contentL').length == 0){
+                mainBlock.appendChild(socialContent).classList.add("social__contentL")
+                document.getElementsByClassName(".social__contentD").remove;
+            }
         }
-    })
-
-
+    }else{
+        if(themeVersion === 'dark'){
+            nav.classList.remove('scroll-headerD');
+            scrollUp.classList.remove('show-scrollD');
+            document.getElementsByClassName(".social__contentD").remove
+        }else{
+            nav.classList.remove('scroll-headerL');
+            scrollUp.classList.remove('show-scrollL');
+            document.getElementsByClassName(".social__contentL").remove
+        }
+    }
 }
 window.addEventListener('scroll', scrollHeader)
-const nav = document.getElementById('header')
-console.log("nav: " + nav.getElementsByClassName('scroll-header'))
-
-/*==================== SHOW SCROLL UP ====================*/ 
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'fa-sun'
 
-// Previously selected topic (if user selected)
+// Theme seleccionado previamente (si esta seleccionado)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
+// Obtenemos el tema actual que tiene la interfaz validando la clase dark-theme
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-moon' : 'fa-sun'
 
-// We validate if the user previously chose a topic
+// Validamos si el usuario eligió previamente un tema
 if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  // Si se cumple la validación, preguntamos cuál es el theme para saber si activamos o desactivamos el oscuro
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'fa-moon' ? 'add' : 'remove'](iconTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+// Activar o desactivar el tema manualmente con un click
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+    // Agrega o remueve iconos del tema
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    // Guardamos el tema y el icono actual que eligió el usuario
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 
-    //change background nav
-    let themeVersion = localStorage.getItem("selected-theme");
-    console.log(themeVersion)
+    //cambio el background
+    themeVersion = localStorage.getItem("selected-theme");
 
     if(themeVersion === 'dark'){
+        let header = this.document.querySelector("header");
+        header.classList.toggle("scroll-headerD");
+        header.classList.remove("scroll-headerL");
+
         window.addEventListener("scroll", function(){
             let nav = document.querySelector("nav");
             nav.classList.toggle("stickyM", window.scrollY > 600);
             nav.classList.remove("stickyS")
         })
     }else{
+        let header = this.document.querySelector("header");
+        header.classList.toggle("scroll-headerL");
+        header.classList.remove("scroll-headerD");
         window.addEventListener("scroll", function(){
             let nav = document.querySelector("nav");
             nav.classList.toggle("stickyS", window.scrollY > 600);
